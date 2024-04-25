@@ -1,0 +1,39 @@
+@use "@styles/globalStyles.scss" as G;
+
+.body {
+  @include G.flexAlignCenter;
+
+  margin: 0 30px;
+  padding: 0 60px;
+  height: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  // position: sticky;
+  // top: 0;
+  @include G.container;
+
+  @include G.breakpoint("sm") {
+    padding: 0 20px;
+  }
+
+  .logoGroup {
+    @include G.flexAlignCenter;
+    gap: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background-color: rgb(34, 31, 230);
+    }
+
+    .logoText {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@use "@styles/globalStyles.scss" as G;
+
+.body {
+  width: 100%;
+  background-color: rgb(241, 248, 255);
+  padding: 60px;
+  @include G.flexJustifyCenter;
+
+  h3,
+  span {
+    font-family: "Lexend", sans-serif;
+  }
+
+  .wrapper {
+    @include G.container;
+    @include G.flexAlignCenter;
+    justify-content: space-between;
+    width: 1280px;
+
+    @include G.breakpoint("xl") {
+      justify-content: center;
+      align-items: start;
+      gap: 70px;
+    }
+
+    @include G.breakpoint("sm") {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: start;
+      gap: 40px;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .logo {
+        @include G.flexAlignCenter;
+        gap: 12px;
+        text-decoration: none;
+
+        img {
+          width: 44px;
+          height: 44px;
+          border-radius: 12px;
+          background-color: rgb(34, 31, 230);
+        }
+
+        span {
+          font-size: 24px;
+          line-height: 32px;
+          font-weight: 700;
+          color: black;
+          text-transform: none;
+        }
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        font-family: "Lexend", sans-serif;
+      }
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      gap: 40px;
+
+      @include G.breakpoint("xl") {
+        grid-template-columns: auto auto;
+      }
+
+      h3 {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        font-weight: 500;
+      }
+
+      span {
+        font-weight: 400;
+        color: #111;
+      }
+
+      .group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  }
+}

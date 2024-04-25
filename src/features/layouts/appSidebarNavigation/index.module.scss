@@ -1,0 +1,11 @@
+@use "@styles/globalStyles.scss" as G;
+
+.body {
+  @include G.flexAlignCenter;
+
+  gap: 54px;
+  cursor: pointer;
+  @include G.breakpoint("sm") {
+    display: none;
+  }
+}

@@ -1,0 +1,263 @@
+@use "@styles/globalStyles.scss" as G;
+
+.body {
+  font-family: "Lexend", sans-serif;
+  @include G.flexAlignCenter;
+  flex-direction: column;
+  gap: 64px;
+  padding: 40px 0 60px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -1.2px;
+    text-align: center;
+  }
+
+  .chatCard {
+    display: grid;
+    grid-template-columns: repeat(3, 395px);
+    gap: 48px;
+
+    @include G.breakpoint("xl") {
+      grid-template-columns: repeat(3, 245px);
+      gap: 20px;
+    }
+
+    @include G.breakpoint("sm") {
+      grid-template-columns: 345px;
+      gap: 64px;
+    }
+
+    h3 {
+      font-size: 26px;
+      line-height: 30px;
+      font-weight: 700;
+
+      @include G.breakpoint("xl") {
+        font-size: 21px;
+        line-height: 24px;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+
+        h4 {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .iconPad {
+      position: relative;
+      .iconGroup {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        transform: translateX(-50%);
+        left: 50%;
+
+        img {
+          width: 300px;
+        }
+
+        .service {
+          @include G.flexAlignCenter;
+          justify-content: space-between;
+          gap: 30px;
+
+          @include G.breakpoint("xl") {
+            gap: 10px;
+          }
+
+          .talk {
+            background-color: white;
+            filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.05));
+            position: relative;
+            border-radius: 12px;
+            width: 245px;
+            padding: 20px 10px;
+
+            @include G.breakpoint("xl") {
+              width: 180px;
+              padding: 10px;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateX(100%) translateY(-50%);
+              content: "";
+              height: 15px;
+              aspect-ratio: 1 / sin(120deg);
+              clip-path: polygon(0 0, 60% 50%, 0 100%);
+              background-color: white;
+            }
+
+            span {
+              font-size: 16px;
+              line-height: 19px;
+              font-weight: 400;
+
+              @include G.breakpoint("xl") {
+                font-size: 12px;
+              }
+            }
+          }
+
+          img {
+            border-radius: 100%;
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        .client {
+          display: flex;
+          gap: 30px;
+
+          @include G.breakpoint("xl") {
+            gap: 10px;
+          }
+
+          .talk {
+            backdrop-filter: blur(65px);
+            background-color: rgb(215, 215, 251);
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
+            position: relative;
+            width: 245px;
+            padding: 20px 10px;
+
+            @include G.breakpoint("xl") {
+              width: 180px;
+              padding: 10px;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 20px;
+              transform: translateX(-100%);
+              content: "";
+              height: 15px;
+              aspect-ratio: 1 / sin(30deg);
+              clip-path: polygon(100% 0, 60% 50%, 100% 100%);
+              background-color: rgb(215, 215, 251);
+            }
+
+            span {
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 300;
+
+              @include G.breakpoint("xl") {
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+          }
+
+          img {
+            border-radius: 100%;
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        .mitting {
+          position: relative;
+          right: -20px;
+
+          @include G.breakpoint("xl") {
+            right: -50px;
+            top: 50px;
+          }
+
+          @include G.breakpoint("sm") {
+            top: 0px;
+            right: -20px;
+          }
+
+          img {
+            width: 360px;
+            border-top-left-radius: 24px;
+
+            @include G.breakpoint("xl") {
+              width: 300px;
+            }
+
+            @include G.breakpoint("sm") {
+              width: 360px;
+            }
+          }
+
+          .user {
+            width: 54px;
+            height: 54px;
+            border-radius: 100%;
+            border: 2px solid white;
+            position: absolute;
+            right: 10px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 100%;
+            }
+          }
+
+          .first {
+            z-index: 10;
+            top: 10px;
+          }
+
+          .second {
+            z-index: 8;
+            top: 50px;
+          }
+
+          .third {
+            background-color: white;
+            z-index: 6;
+            top: 90px;
+            @include G.flexCenter;
+
+            p {
+              font-size: 16px;
+              line-height: 25px;
+              font-weight: 500;
+              font-family: "DM Sans", sans-serif;
+            }
+          }
+
+          .lock {
+            width: 83px;
+            height: 83px;
+            border-radius: 100%;
+            @include G.flexCenter;
+            position: absolute;
+            background-color: white;
+            top: 80px;
+            left: -20px;
+          }
+        }
+      }
+    }
+  }
+}

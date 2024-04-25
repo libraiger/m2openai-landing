@@ -1,0 +1,73 @@
+@use "@styles/globalStyles.scss" as G;
+
+.body {
+  @include G.sectionPadding;
+  @include G.flexCenter;
+
+  h3,
+  span,
+  p {
+    font-family: "Lexend", sans-serif;
+  }
+
+  .wrapper {
+    @include G.flexCenter;
+    flex-direction: column;
+
+    width: 1280px;
+    height: 436px;
+    border-radius: 24px;
+    background-color: rgb(245, 245, 245);
+
+    @include G.breakpoint("xl") {
+      width: 780px;
+    }
+
+    @include G.breakpoint("sm") {
+      width: 350px;
+      padding: 50px 20px;
+    }
+
+    h3 {
+      font-size: 32px;
+      letter-spacing: -0.01em;
+      line-height: 36px;
+      text-align: center;
+      font-weight: 400;
+      width: 700px;
+
+      @include G.breakpoint("xl") {
+        width: 640px;
+      }
+
+      @include G.breakpoint("sm") {
+        width: 260px;
+        font-size: 20px;
+      }
+    }
+
+    img {
+      margin-top: 40px;
+      border-radius: 100%;
+      width: 64px;
+      aspect-ratio: 1/1;
+    }
+
+    span,
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+
+    span {
+      margin-top: 16px;
+    }
+
+    p {
+      color: rgb(151, 151, 151);
+    }
+  }
+}

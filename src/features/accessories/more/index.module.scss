@@ -1,0 +1,92 @@
+@use "@styles/globalStyles.scss" as G;
+
+.body {
+  @include G.flexAlignCenter;
+  flex-direction: column;
+  padding: 60px 0;
+  font-family: "Lexend", sans-serif;
+
+  .container {
+    @include G.flexCenter;
+    gap: 60px;
+    flex-direction: column;
+    width: 1380px;
+
+    @include G.breakpoint("xl") {
+      width: 800px;
+    }
+
+    @include G.breakpoint("sm") {
+      width: 400px;
+    }
+
+    .title {
+      display: grid;
+      width: 1140px;
+
+      @include G.breakpoint("xl") {
+        width: 750px;
+      }
+
+      @include G.breakpoint("sm") {
+        width: 350px;
+      }
+
+      h2 {
+        justify-self: start;
+        color: #333;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -2px;
+      }
+    }
+
+    .cardGroup {
+      @include G.flexCenter;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 100%;
+
+      .card {
+        @include G.flexAlignCenter;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0.796192px 2.38858px -0.625px,
+          rgba(0, 0, 0, 0.05) 0px 2.41451px 7.24352px -1.25px,
+          rgba(0, 0, 0, 0.05) 0px 6.38265px 19.148px -1.875px,
+          rgba(0, 0, 0, 0.05) 0px 20px 60px -2.5px;
+        height: 360px;
+        width: 370px;
+        padding: 30px;
+        gap: 30px;
+
+        h3 {
+          @include G.flexAlignCenter;
+          justify-content: flex-start;
+          width: 100%;
+
+          color: #012;
+
+          font-family: "Inter";
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 28px;
+          letter-spacing: -0.5px;
+        }
+
+        p {
+          color: #666;
+
+          font-family: "Roboto";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 25.6px;
+        }
+      }
+    }
+  }
+}

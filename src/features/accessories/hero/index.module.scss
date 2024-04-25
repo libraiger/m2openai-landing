@@ -1,0 +1,108 @@
+@use "@styles/globalStyles.scss" as G;
+
+.body {
+  min-height: 896px;
+  background-image: url("/dashboard/hero.jpg");
+  background-size: cover;
+
+  @include G.flexAlignCenter;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+
+  h1 {
+    font-size: 64px;
+    padding-top: 190px;
+    line-height: 72px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 21px;
+    line-height: 24px;
+    text-align: center;
+    max-width: 600px;
+  }
+
+  h1,
+  h2 {
+    font-weight: 600;
+
+    @include G.breakpoint("sm") {
+      max-width: 350px;
+    }
+  }
+
+  .card {
+    border-radius: 24px;
+    background-color: white;
+    min-height: 237px;
+    padding: 24px;
+    margin-top: 43px;
+    position: relative;
+    filter: drop-shadow(0 6px 2px rgba(0, 0, 0, 0.16));
+
+    &::after {
+      position: absolute;
+      top: 0;
+      transform: translateY(-100%);
+      content: "";
+      width: 40px;
+      aspect-ratio: 1 / cos(60deg);
+      clip-path: polygon(50% 0, 100% 100%, 0 100%);
+      background-color: white;
+    }
+
+    @include G.flexAlignCenter;
+    flex-direction: column;
+    gap: 15px;
+
+    .inner {
+      @include G.flexCenter;
+      flex-direction: column;
+      gap: 5px;
+
+      border-radius: 8px;
+      width: 302px;
+      height: 150px;
+      background-color: #f6f8fa;
+
+      h3 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+    }
+
+    .link {
+      @include G.flexAlignCenter;
+      gap: 10px;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      .url {
+        @include G.flexAlignCenter;
+        gap: 4px;
+
+        a {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 500;
+          color: black;
+          font-family: "Lexend", sans-serif;
+        }
+      }
+    }
+  }
+
+  .notice {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    margin-top: 160px;
+  }
+}
