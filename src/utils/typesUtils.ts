@@ -11,6 +11,7 @@ export interface CustomButtonStypeType {
   $color?: string;
   $fontSize?: string;
   $fontWeight?: string;
+  $cursor?: string;
   $fontFamily?: string;
   $padding?: string;
   $width?: string;
@@ -21,6 +22,7 @@ export interface CustomButtonStypeType {
   $lineHeight?: string;
   icon?: any;
   $marginTop?: string;
+  onClick?: any;
 }
 
 export interface ChatCardStyleType {

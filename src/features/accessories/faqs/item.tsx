@@ -4,18 +4,21 @@ interface PropsType {
   $active: Boolean;
   $header: String;
   $content: String;
+  onClick?: any;
 }
 
 export const Item = ({
   $active,
   $header,
-  $content
+  $content,
+  onClick
 }: PropsType) => {
   return (
     <S.Container
       $active={$active}
       $header={$header}
       $content={$content}
+      onClick={onClick}
       className="letter"
     >
       <div className="collapHeader">

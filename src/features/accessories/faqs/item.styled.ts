@@ -19,6 +19,7 @@ ${({$active}) => $active ?
     
     width: 100%;
     .collapHeader {
+      cursor:pointer;
       display: flex;
       position: relative;
       padding: 20px 0px 20px 40px;

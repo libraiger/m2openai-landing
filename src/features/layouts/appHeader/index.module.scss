@@ -20,6 +20,9 @@
   .logoGroup {
     @include G.flexAlignCenter;
     gap: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 
     .logo {
       width: 44px;

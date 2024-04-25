@@ -15,6 +15,7 @@ const Container = styled.button<CustomButtonStypeType>`
   display: ${({ $display }) => $display};
   align-items: ${({ $alignItems }) => $alignItems};
   gap: ${({ $gap }) => $gap};
+  cursor: ${({ $cursor }) => $cursor};
   padding: ${({ $padding }) => $padding};
   margin-top: ${({ $marginTop }) => $marginTop};
 `;
