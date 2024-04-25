@@ -18,9 +18,7 @@ export const CustomButton = ({
   $alignItems,
   $lineHeight,
   $marginTop,
-  $cursor,
   icon,
-  onClick
 }: CustomButtonStypeType) => {
   return (
     <S.Container
@@ -39,8 +37,6 @@ export const CustomButton = ({
       $alignItems={$alignItems}
       $lineHeight={$lineHeight}
       $marginTop={$marginTop}
-      $cursor={$cursor}
-      onClick={onClick}
     >
       {title}
       {icon}

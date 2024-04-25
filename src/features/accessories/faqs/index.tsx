@@ -1,6 +1,5 @@
 import S from "./index.module.scss";
 import { Item } from "./item";
-import React, { useState } from 'react';
 
 export const Faqs = () => {
   const items = [
@@ -21,22 +20,15 @@ export const Faqs = () => {
       content : "Sharly makes you 10x faster by quickly summarize and analyze precise information you need from any document, eliminating the time-consuming task of manual search and reading. Additionally allows you to cross-reference multiple documents simultaneously."
     }, 
   ]
-  const [active, setActive] = useState([false, false, false, false]);
-
-  const handleItemClick = (index:number) => {
-    setActive(prevState => {
-      const updatedActive = [...prevState];
-      updatedActive[index] = !updatedActive[index];
-      return updatedActive;
-    })
-  }
   return (
     <div className={S.body}>
       <h1>Frequently asked questions</h1>
       <div className={S.wrapper}>
         {
           items.map((item, index)=>(
-            <Item key={index} $active={active[index]} $header={item.header} $content={item.content} onClick={()=> handleItemClick(index)}/>
+            index == 3?
+            <Item key={index} $active={true} $header={item.header} $content={item.content} />
+            :<Item key={index} $active={false} $header={item.header} $content={item.content} />
           ))
         }
       </div>

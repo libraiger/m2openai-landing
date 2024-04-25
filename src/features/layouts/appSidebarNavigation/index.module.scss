@@ -4,7 +4,7 @@
   @include G.flexAlignCenter;
 
   gap: 54px;
-  cursor: pointer;
+
   @include G.breakpoint("sm") {
     display: none;
   }

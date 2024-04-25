@@ -9,7 +9,7 @@ export const AppFooter = () => {
             <img src="" alt="" />
             <span>Sharly</span>
           </a>
-          <span>Copyright © 2024 VOX AI Inc.</span>
+          <span>Copyright © 2023 VOX AI Inc.</span>
           <span>All rights reserved.</span>
         </div>
         <div className={S.links}>
